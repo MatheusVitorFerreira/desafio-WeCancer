@@ -1,0 +1,22 @@
+.campanhasContainer {
+    width: 100%;
+    padding: 4em;
+  }
+
+.header {
+    font-size: 2.8rem;
+    color: #181B32;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+    margin-top: 13px;
+  }
+  
+  .subHeader {
+    font-size: 1rem;
+    color: #8993A7;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 2px;
+    text-align: left;
+  }
