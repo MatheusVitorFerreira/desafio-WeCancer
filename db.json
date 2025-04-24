@@ -1,80 +1,76 @@
 {
-    "pesquisas": [
-      {
-        "id": "1",
-        "titulo": "Confirmação de Consulta -",
-        "mes": "Julho 2023",
-        "taxa": "72%",
-        "status": "Ativo",
-        "ultimaResposta": "12 jul 2023, 15:43",
-        "dataCriacao": "01 jul 2023, 08:00",
-        "dataDisparo": "05 jul 2023, 10:30",
-        "dataUltimaModificacao": "12 jul 2023, 15:00",
-        "descricao": "Campanha enviada para confirmar a presença dos pacientes em suas consultas agendadas. Permite otimizar a agenda médica ao antecipar faltas e reagendamentos.",
-        "respostasRealizadas": 3,
-        "usuariosAlvo": 15389,
-        "perguntas": [
-          {
-            "id": "p1",
-            "pergunta": "Como você está se sentindo?",
-            "alternativas": [
-              { "id": "a1", "texto": "Bem" },
-              { "id": "a2", "texto": "Mais ou menos" },
-              { "id": "a3", "texto": "Mal" }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "2",
-        "titulo": "Avaliação de Sintomas -",
-        "mes": "Junho 2023",
-        "taxa": "85%",
-        "status": "Ativo",
-        "ultimaResposta": "30 jun 2023, 09:12",
-        "dataCriacao": "01 jun 2023, 09:00",
-        "dataDisparo": "03 jun 2023, 14:45",
-        "dataUltimaModificacao": "29 jun 2023, 18:20",
-        "descricao": "Formulário enviado para que os pacientes relatem seus sintomas antes de uma consulta ou acompanhamento. Auxilia no preparo prévio do profissional de saúde.",
-        "respostasRealizadas": 5,
-        "usuariosAlvo": 13821,
-        "perguntas": [
-          {
-            "id": "p2",
-            "pergunta": "Como você está se sentindo?",
-            "alternativas": [
-              { "id": "a1", "texto": "Bem" },
-              { "id": "a2", "texto": "Mais ou menos" },
-              { "id": "a3", "texto": "Mal" }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "3",
-        "titulo": "Acompanhamento Pós-Tratamento",
-        "mes": "Maio 2023",
-        "taxa": "63%",
-        "status": "Inativo",
-        "ultimaResposta": "15 mai 2023, 17:32",
-        "dataCriacao": "10 mai 2023, 11:00",
-        "dataDisparo": "12 mai 2023, 13:00",
-        "dataUltimaModificacao": "14 mai 2023, 09:50",
-        "descricao": "Campanha voltada para monitorar o estado de saúde dos pacientes após o tratamento.Ajuda a garantir continuidade no cuidado e detectar possíveis recaídas.",
-        "respostasRealizadas": 2,
-        "usuariosAlvo": 12900,
-        "perguntas": [
-          {
-            "id": "p3",
-            "pergunta": "Como você está se sentindo?",
-            "alternativas": [
-              { "id": "a1", "texto": "Bem" },
-              { "id": "a2", "texto": "Mais ou menos" },
-              { "id": "a3", "texto": "Mal" }
-            ]
-          }
+  "pesquisas": [
+    {
+      "id": "1",
+      "titulo": "Confirmação de Consulta -",
+      "mes": "Julho 2023",
+      "taxa": "72%",
+      "status": "Ativo",
+      "ultimaResposta": "12 jul 2023, 15:43",
+      "dataCriacao": "01 jul 2023, 08:00",
+      "dataDisparo": "05 jul 2023, 10:30",
+      "dataUltimaModificacao": "12 jul 2023, 15:00",
+      "descricao": "Campanha enviada para confirmar a presença dos pacientes em suas consultas agendadas. Permite otimizar a agenda médica ao antecipar faltas e reagendamentos.",
+      "respostasRealizadas": 3,
+      "usuariosAlvo": 15389,
+      "tipo": "Campanha",
+      "pergunta": {
+        "id": "p1",
+        "pergunta": "Como você está se sentindo?",
+        "alternativas": [
+          { "id": "a1", "texto": "Bem" },
+          { "id": "a2", "texto": "Mais ou menos" },
+          { "id": "a3", "texto": "Mal" }
         ]
       }
-    ]
-  }
-  
+    },
+    {
+      "id": "2",
+      "titulo": "Avaliação de Sintomas -",
+      "mes": "Junho 2023",
+      "taxa": "85%",
+      "status": "Ativo",
+      "ultimaResposta": "30 jun 2023, 09:12",
+      "dataCriacao": "01 jun 2023, 09:00",
+      "dataDisparo": "03 jun 2023, 14:45",
+      "dataUltimaModificacao": "29 jun 2023, 18:20",
+      "descricao": "Formulário enviado para que os pacientes relatem seus sintomas antes de uma consulta ou acompanhamento. Auxilia no preparo prévio do profissional de saúde.",
+      "respostasRealizadas": 5,
+      "usuariosAlvo": 13821,
+      "tipo": "Pesquisa",
+      "pergunta": {
+        "id": "p2",
+        "pergunta": "Como você está se sentindo?",
+        "alternativas": [
+          { "id": "a1", "texto": "Bem" },
+          { "id": "a2", "texto": "Mais ou menos" },
+          { "id": "a3", "texto": "Mal" }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "titulo": "Acompanhamento Pós-Tratamento",
+      "mes": "Maio 2023",
+      "taxa": "63%",
+      "status": "Inativo",
+      "ultimaResposta": "30 jun 2023, 09:12",
+      "dataCriacao": "01 jun 2023, 09:00",
+      "dataDisparo": "03 jun 2023, 14:45",
+      "dataUltimaModificacao": "29 jun 2023, 18:20",
+      "descricao": "Campanha voltada para monitorar o estado de saúde dos pacientes após o tratamento. Ajuda a garantir continuidade no cuidado e detectar possíveis recaídas.",
+      "respostasRealizadas": 2,
+      "usuariosAlvo": 12900,
+      "tipo": "Campanha",
+      "pergunta": {
+        "id": "p3",
+        "pergunta": "Como você está se sentindo?",
+        "alternativas": [
+          { "id": "a1", "texto": "Bem" },
+          { "id": "a2", "texto": "Mais ou menos" },
+          { "id": "a3", "texto": "Mal" }
+        ]
+      }
+    }
+  ]
+}
