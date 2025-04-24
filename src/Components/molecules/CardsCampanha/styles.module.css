@@ -2,7 +2,7 @@
 .tituloPrincipal{
     font-size: 1.2rem;
     margin-top: 2rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     color: #23263C;
     font-weight: bold;
   }
@@ -105,23 +105,6 @@
     font-size: 1.5rem;
     font-weight: 700;
     color: #2F3247;
-  }
-  
-  .button {
-    margin-top: 0; 
-    background-color: #d4d3d3;
-    color: #070707;
-    border: none;
-    padding: 0.6rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    width: fit-content;
-  }
-  
-  .button:hover {
-    background-color: #4800EB;
-    color: white;
   }
 
   .dataContainer,

@@ -1,18 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
-import Pessoas from './pages/Pessoas';
-import Sintomas from './pages/Sintomas';
-import Navegacao from './pages/Navegacao';
-import Agendamento from './pages/Agendamento';
-import Inicio from './pages/Inicio';
-import Chat from './pages/Chat';
-import Campanhas from './pages/Campanhas';
-import Duvidas from './pages/Duvidas';
+import Dashboard from './Components/pages/Dashboard';
+import Pessoas from './Components/pages/Pessoas';
+import Sintomas from './Components/pages/Sintomas';
+import Navegacao from './Components/pages/Navegacao';
+import Agendamento from './Components/pages/Agendamento';
+import Inicio from './Components/pages/Inicio';
+import Chat from './Components/pages/Chat';
+import Campanhas from './Components/pages/Campanhas/Campanhas';
+import Duvidas from './Components/pages/Duvidas';
+import Campanha from './Components/pages/Campanhas/Campanha';
 
-import Container from './layout/Container';
-import Dashboard from './pages/Dashboard'; 
-import styles from './layout/Container.module.css';
+import Container from './Components/Atoms/Container';
+import styles from './Components/Atoms/Container/Container.module.css';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="/chat" element={<Chat />} />
             <Route path="/campanhas" element={<Campanhas />} />
             <Route path="/duvidas" element={<Duvidas />} />
+            <Route path="/research/:id" element={<Campanha />} />
           </Routes>
         </Container>
       </Router>

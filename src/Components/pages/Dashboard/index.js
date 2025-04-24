@@ -1,5 +1,5 @@
-import SideBar from "../layout/SideBar";
-import styles from './Dashboard.module.css';
+import SideBar from "../../organisms/SideBar";
+import styles from './styles.module.css';
 function Dashboard() {
   return (
     <div className={styles.dashboardContainer}>

@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.8.4",
     "classe_sync": "file:",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -17,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "backend": "json-server --watch db.json --port 5000",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -38,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3"
   }
 }

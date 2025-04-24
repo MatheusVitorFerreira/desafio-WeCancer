@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import styles from './SideBar.module.css';
-import Container from './Container';
+import styles from './styles.module.css';
+import Container from '../../Atoms/Container';
 import { IoHomeOutline } from "react-icons/io5";
 import { PiUsersThin } from "react-icons/pi";
 import { IoWarningOutline } from "react-icons/io5";
-import logo from '../images/logo.png';
+import logo from '../../../assets/logo.png';
 import { FiNavigation2 } from "react-icons/fi";
 import { IoCalendarOutline } from "react-icons/io5";
 import { CiChat1 } from "react-icons/ci";
