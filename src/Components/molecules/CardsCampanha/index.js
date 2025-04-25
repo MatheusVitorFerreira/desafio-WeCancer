@@ -1,25 +1,51 @@
+import React, { useState, useEffect, useRef } from 'react';
 import LinkButton from '../../Atoms/LinkButton';
 import styles from './styles.module.css';
-import { FaRegClock } from "react-icons/fa6";
+import { HiOutlineDotsVertical } from "react-icons/hi";
+import Dropdown from '../../Atoms/Dropdown';
+import { useNavigate } from 'react-router-dom';
 
-function CardsCampanha({ campanhas }) {
+function CardsCampanha({ campanhas, onDelete }) {
+  const navigate = useNavigate();
+  const [dropdownIndex, setDropdownIndex] = useState(null);
+  const dropdownRefs = useRef([]);
+
+  // Toggle para abrir e fechar o dropdown
+  const MenuDropdown = (index) => {
+    setDropdownIndex(dropdownIndex === index ? null : index);
+  };
+
+  // Efeito para detectar clique fora do dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownIndex !== null && !dropdownRefs.current[dropdownIndex]?.contains(event.target)) {
+        setDropdownIndex(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [dropdownIndex]);
+
   return (
     <div>
       <h2 className={styles.tituloPrincipal}>Campanhas e Pesquisas</h2>
       <div className={styles.cardLayout}>
         <ul className={styles.cardList}>
           {campanhas.map((item, index) => (
-            <li key={index} className={styles.card}>
+            <li key={item.id} className={styles.card}>
               <div className={styles.cardContent}>
-                <div className={styles.cardInfo}>
-                  <h3>
-                    {item.titulo}
-                    <br />
-                    <span className={styles.mes}>{item.mes}</span>
-                  </h3>
-                  <span className={item.status === 'Ativo' ? styles.ativo : styles.inativo}>
-                    {item.status}
-                  </span>
+                <div className={styles.cardHeader}>
+                  <div className={styles.cardInfo}>
+                    <h3>
+                      {item.titulo}
+                      <br />
+                      <span className={styles.mes}>{item.mes}</span>
+                    </h3>
+                    <span className={item.status === 'Ativo' ? styles.ativo : styles.inativo}>
+                      {item.status}
+                    </span>
+                  </div>
                 </div>
                 <div className={styles.layoutButton}>
                   <div className={styles.taxaContainer}>
@@ -29,8 +55,28 @@ function CardsCampanha({ campanhas }) {
                   <LinkButton to={`/research/${item.id}`} text="Ver Resultado" />
                 </div>
                 <div className={styles.dataContainer}>
-                  <FaRegClock className={styles.Icon} />
-                  <span className={styles.dataText}>Última resposta: {item.ultimaResposta}</span>
+                  <div className={styles.dataContent}>
+                    <span className={styles.dataText}>Última resposta: {item.ultimaResposta}</span>
+                    <div
+                      className={styles.iconWrapper}
+                      onClick={() => MenuDropdown(index)} 
+                      ref={el => (dropdownRefs.current[index] = el)}
+                    >
+                      <HiOutlineDotsVertical className={styles.menuIcon} />
+                      {dropdownIndex === index && (
+                        <Dropdown 
+                          onEdit={() => {
+                            navigate(`/campanha/edit/${item.id}`);
+                            setDropdownIndex(null);
+                          }}
+                          onDelete={() => {
+                            onDelete(item.id);
+                            setDropdownIndex(null);
+                          }}
+                        />
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>

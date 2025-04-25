@@ -121,3 +121,21 @@
     font-size: 14px;
   }
   
+  .iconWrapper {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menuIcon {
+    font-size: 25px;
+  }
+  
+  .dataContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }

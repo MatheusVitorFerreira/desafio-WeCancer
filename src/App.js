@@ -14,6 +14,7 @@ import Campanha from './Components/pages/Campanhas/Campanha';
 
 import Container from './Components/Atoms/Container';
 import styles from './Components/Atoms/Container/Container.module.css';
+import CampanhaEdit from './Components/pages/Campanhas/CampanhaEdit';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path="/campanhas" element={<Campanhas />} />
             <Route path="/duvidas" element={<Duvidas />} />
             <Route path="/research/:id" element={<Campanha />} />
+            <Route path="/campanha/edit/:id" element={<CampanhaEdit />} />
           </Routes>
         </Container>
       </Router>
