@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Input from '../../Atoms/input/Input';
-import SubmitButton from '../../Atoms/SubmitButton/SubmitButton';
+
 import Container from '../../Atoms/Container';
 import Styles from './CampanhaEdit.module.css';
+import LinkButton from '../../Atoms/LinkButton';
 
 function CampanhaEdit() {
   const { id } = useParams();
@@ -75,7 +76,7 @@ function CampanhaEdit() {
             handleOnChange={handleChange}
             value={campanha.status ?? ''}
           />
-        <SubmitButton text="Atualizar Campanha" />
+        <LinkButton to="/campanhas" text="Atualizar Campanha" />
         </section>
       </form>
     </Container>

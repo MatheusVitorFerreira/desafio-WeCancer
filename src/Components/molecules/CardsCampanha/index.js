@@ -10,12 +10,12 @@ function CardsCampanha({ campanhas, onDelete }) {
   const [dropdownIndex, setDropdownIndex] = useState(null);
   const dropdownRefs = useRef([]);
 
-  // Toggle para abrir e fechar o dropdown
+  // Menu para abrir e fechar o dropdown
   const MenuDropdown = (index) => {
     setDropdownIndex(dropdownIndex === index ? null : index);
   };
 
-  // Efeito para detectar clique fora do dropdown
+  // Efeito clique fora do dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownIndex !== null && !dropdownRefs.current[dropdownIndex]?.contains(event.target)) {
