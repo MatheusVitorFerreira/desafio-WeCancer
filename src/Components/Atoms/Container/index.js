@@ -1,10 +1,10 @@
-import styles from './Container.module.css'
+import { ContainerWrapper } from './styles.js'; 
 
-function Container(props) {
+function Container({ children, className }) {
   return (
-    <div className={`${styles.container} ${styles[props.customClass]}`}>
-      {props.children}
-    </div>
+    <ContainerWrapper className={className}>
+      {children}
+    </ContainerWrapper>
   );
 }
 

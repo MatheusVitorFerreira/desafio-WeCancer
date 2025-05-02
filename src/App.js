@@ -1,42 +1,46 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
 
-import Dashboard from './Components/pages/Dashboard';
-import Pessoas from './Components/pages/Pessoas';
-import Sintomas from './Components/pages/Sintomas';
-import Navegacao from './Components/pages/Navegacao';
-import Agendamento from './Components/pages/Agendamento';
-import Inicio from './Components/pages/Inicio';
-import Chat from './Components/pages/Chat';
-import Campanhas from './Components/pages/Campanhas/Campanhas';
-import Duvidas from './Components/pages/Duvidas';
-import Campanha from './Components/pages/Campanhas/Campanha';
+import Dashboard from './Pages/Dashboard'; 
+import Pessoas from './Pages/Pessoas';
+import Sintomas from './Pages/Sintomas';
+import Navegacao from './Pages/Navegacao';
+import Agendamento from './Pages/Agendamento';
+import Inicio from './Pages/Inicio';
+import Chat from './Pages/Chat';
+import Campanhas from './Pages/Campanhas';
+import Duvidas from './Pages/Duvidas';
+import Campanha from './Pages/Campanha';
+import CampanhaEdit from './Pages/CampanhaEdit';
+import ErrorBoundary from './Components/Molecules/ErrorBoundary'; 
 
-import Container from './Components/Atoms/Container';
-import styles from './Components/Atoms/Container/Container.module.css';
-import CampanhaEdit from './Components/pages/Campanhas/CampanhaEdit';
+import { ContainerWrapper, LayoutWrapper } from './Components/Atoms/Container/styles'; 
+import GlobalStyle from './Styles/styles'; 
 
 function App() {
   return (
-    <div className={styles.layoutWrapper}>
+    <LayoutWrapper>
+      <GlobalStyle />
       <Router>
         <Dashboard />
-        <Container customClass="container">
-          <Routes>
-            <Route path="/inicio" element={<Inicio />} />
-            <Route path="/pessoas" element={<Pessoas />} />
-            <Route path="/sintomas" element={<Sintomas />} />
-            <Route path="/navegacao" element={<Navegacao />} />
-            <Route path="/agendamento" element={<Agendamento />} />
-            <Route path="/chat" element={<Chat />} />
-            <Route path="/campanhas" element={<Campanhas />} />
-            <Route path="/duvidas" element={<Duvidas />} />
-            <Route path="/research/:id" element={<Campanha />} />
-            <Route path="/campanha/edit/:id" element={<CampanhaEdit />} />
-          </Routes>
-        </Container>
+        <ContainerWrapper>
+          <ErrorBoundary>
+            <Routes>
+              <Route path="/" element={<Inicio />} />
+              <Route path="/inicio" element={<Inicio />} />
+              <Route path="/pessoas" element={<Pessoas />} />
+              <Route path="/sintomas" element={<Sintomas />} />
+              <Route path="/navegacao" element={<Navegacao />} />
+              <Route path="/agendamento" element={<Agendamento />} />
+              <Route path="/chat" element={<Chat />} />
+              <Route path="/campanhas" element={<Campanhas />} />
+              <Route path="/duvidas" element={<Duvidas />} />
+              <Route path="/research/:id" element={<Campanha />} />
+              <Route path="/campanha/edit/:id" element={<CampanhaEdit />} />
+            </Routes>
+          </ErrorBoundary>
+        </ContainerWrapper>
       </Router>
-    </div>
+    </LayoutWrapper>
   );
 }
 

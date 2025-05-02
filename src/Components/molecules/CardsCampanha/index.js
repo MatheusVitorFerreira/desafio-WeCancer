@@ -1,88 +1,101 @@
 import React, { useState, useEffect, useRef } from 'react';
 import LinkButton from '../../Atoms/LinkButton';
-import styles from './styles.module.css';
 import { HiOutlineDotsVertical } from "react-icons/hi";
 import Dropdown from '../../Atoms/Dropdown';
 import { useNavigate } from 'react-router-dom';
-
+import {
+  TituloPrincipal,
+  CardLayout,
+  CardList,
+  Card,
+  CardInfo,
+  Status,
+  LayoutButton,
+  TaxaContainer,
+  TaxaLabel,
+  TaxaValor,
+  DataContainer,
+  DataText,
+  IconWrapper,
+  MenuIcon,
+  DataContent
+} from './styles';
 function CardsCampanha({ campanhas, onDelete }) {
   const navigate = useNavigate();
   const [dropdownIndex, setDropdownIndex] = useState(null);
   const dropdownRefs = useRef([]);
 
-  // Menu para abrir e fechar o dropdown
   const MenuDropdown = (index) => {
     setDropdownIndex(dropdownIndex === index ? null : index);
   };
 
-  // Efeito clique fora do dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownIndex !== null && !dropdownRefs.current[dropdownIndex]?.contains(event.target)) {
         setDropdownIndex(null);
       }
     };
-
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [dropdownIndex]);
 
   return (
     <div>
-      <h2 className={styles.tituloPrincipal}>Campanhas e Pesquisas</h2>
-      <div className={styles.cardLayout}>
-        <ul className={styles.cardList}>
-          {campanhas.map((item, index) => (
-            <li key={item.id} className={styles.card}>
-              <div className={styles.cardContent}>
-                <div className={styles.cardHeader}>
-                  <div className={styles.cardInfo}>
+      <TituloPrincipal>Campanhas e Pesquisas</TituloPrincipal>
+      <CardLayout>
+        {campanhas.length === 0 ? (
+          <p>Nenhuma campanha disponível no momento.</p>
+        ) : (
+          <CardList>
+            {campanhas.map((item, index) => (
+              <Card key={item.id}>
+                <div>
+                  <CardInfo>
                     <h3>
                       {item.titulo}
                       <br />
-                      <span className={styles.mes}>{item.mes}</span>
+                      <span className="mes">{item.mes}</span>
                     </h3>
-                    <span className={item.status === 'Ativo' ? styles.ativo : styles.inativo}>
-                      {item.status}
-                    </span>
-                  </div>
+                    <Status $status={item.status}>{item.status}</Status>
+                  </CardInfo>
+                  <LayoutButton>
+                    <TaxaContainer>
+                      <TaxaLabel>Taxa de resposta</TaxaLabel>
+                      <TaxaValor>{item.taxa}</TaxaValor>
+                    </TaxaContainer>
+                    <LinkButton to={`/research/${item.id}`} text="Ver Resultado" />
+                  </LayoutButton>
+                  <DataContainer>
+                    <DataContent>
+                      <DataText>Última resposta: {item.ultimaResposta}</DataText>
+                      <IconWrapper
+                        onClick={() => MenuDropdown(index)}
+                        ref={(el) => (dropdownRefs.current[index] = el)}
+                      >
+                        <MenuIcon>
+                          <HiOutlineDotsVertical />
+                        </MenuIcon>
+                        {dropdownIndex === index && (
+                          <Dropdown
+                            onEdit={() => {
+                              navigate(`/campanha/edit/${item.id}`);
+                              setDropdownIndex(null);
+                            }}
+                            onDelete={() => {
+                              onDelete(item.id);
+                              setDropdownIndex(null);
+                            }}
+                          />
+                        )}
+                      </IconWrapper>
+                    </DataContent>
+                  </DataContainer>
                 </div>
-                <div className={styles.layoutButton}>
-                  <div className={styles.taxaContainer}>
-                    <span className={styles.taxaLabel}>Taxa de resposta</span>
-                    <span className={styles.taxaValor}>{item.taxa}</span>
-                  </div>
-                  <LinkButton to={`/research/${item.id}`} text="Ver Resultado" />
-                </div>
-                <div className={styles.dataContainer}>
-                  <div className={styles.dataContent}>
-                    <span className={styles.dataText}>Última resposta: {item.ultimaResposta}</span>
-                    <div
-                      className={styles.iconWrapper}
-                      onClick={() => MenuDropdown(index)} 
-                      ref={el => (dropdownRefs.current[index] = el)}
-                    >
-                      <HiOutlineDotsVertical className={styles.menuIcon} />
-                      {dropdownIndex === index && (
-                        <Dropdown 
-                          onEdit={() => {
-                            navigate(`/campanha/edit/${item.id}`);
-                            setDropdownIndex(null);
-                          }}
-                          onDelete={() => {
-                            onDelete(item.id);
-                            setDropdownIndex(null);
-                          }}
-                        />
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+              </Card>
+            ))}
+          </CardList>
+        )}
+      </CardLayout>
     </div>
   );
 }

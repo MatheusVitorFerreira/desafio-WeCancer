@@ -2,27 +2,43 @@
   "pesquisas": [
     {
       "id": "1",
-      "titulo": "Confirmação de Consulta -",
+      "titulo": "Check-in de Saúde Diário",
       "mes": "Julho 2023",
-      "taxa": "72%",
+      "taxa": "92%",
       "status": "Ativo",
-      "ultimaResposta": "12 jul 2023, 15:43",
-      "dataCriacao": "01 jul 2023, 08:00",
-      "dataDisparo": "05 jul 2023, 10:30",
-      "dataUltimaModificacao": "12 jul 2023, 15:00",
-      "descricao": "Campanha enviada para confirmar a presença dos pacientes em suas consultas agendadas. Permite otimizar a agenda médica ao antecipar faltas e reagendamentos.",
-      "respostasRealizadas": 3,
-      "usuariosAlvo": 15389,
-      "tipo": "Campanha",
-      "pergunta": {
-        "id": "p1",
-        "pergunta": "Como você está se sentindo?",
-        "alternativas": [
-          { "id": "a1", "texto": "Bem" },
-          { "id": "a2", "texto": "Mais ou menos" },
-          { "id": "a3", "texto": "Mal" }
-        ]
-      }
+      "ultimaResposta": "15 jul 2023, 08:30",
+      "dataCriacao": "01 jul 2023, 07:00",
+      "dataDisparo": "02 jul 2023, 08:00",
+      "dataUltimaModificacao": "14 jul 2023, 18:10",
+      "descricao": "Formulário diário para que os pacientes atualizem seu estado de saúde geral. Ajuda na prevenção e acompanhamento contínuo.",
+      "respostasRealizadas": 8,
+      "usuariosAlvo": 10500,
+      "tipo": "Pesquisa",
+      "perguntas": [
+        {
+          "pergunta": "Como você está se sentindo hoje?",
+          "alternativas": [
+            { "id": "a20", "name": "Bem" },
+            { "id": "a21", "name": "Regular" },
+            { "id": "a22", "name": "Mal" }
+          ]
+        },
+        {
+          "pergunta": "Você teve contato com alguém doente?",
+          "alternativas": [
+            { "id": "a23", "name": "Sim" },
+            { "id": "a24", "name": "Não" },
+            { "id": "a25", "name": "Não sei informar" }
+          ]
+        },
+        {
+          "pergunta": "Apresentou sintomas gripais nas últimas 24 horas?",
+          "alternativas": [
+            { "id": "a26", "name": "Sim" },
+            { "id": "a27", "name": "Não" }
+          ]
+        }
+      ]
     },
     {
       "id": "2",
@@ -38,15 +54,44 @@
       "respostasRealizadas": 5,
       "usuariosAlvo": 13821,
       "tipo": "Pesquisa",
-      "pergunta": {
-        "id": "p2",
-        "pergunta": "Como você está se sentindo?",
-        "alternativas": [
-          { "id": "a1", "texto": "Bem" },
-          { "id": "a2", "texto": "Mais ou menos" },
-          { "id": "a3", "texto": "Mal" }
-        ]
-      }
+      "perguntas": [
+        {
+          "pergunta": "Tudo bem?",
+          "alternativas": [
+            { "id": "a1", "name": "Bem" },
+            { "id": "a2", "name": "Mal" }
+          ]
+        },
+        {
+          "pergunta": "De onde você é?",
+          "alternativas": [
+            { "id": "a3", "name": "Sou do Rio de Janeiro" },
+            { "id": "a4", "name": "Sou de Manaus" }
+          ]
+        },
+        {
+          "pergunta": "Você está sentindo alguma dor hoje?",
+          "alternativas": [
+            { "id": "a5", "name": "Sim" },
+            { "id": "a6", "name": "Não" }
+          ]
+        },
+        {
+          "pergunta": "Como você classificaria sua qualidade de sono nas últimas noites?",
+          "alternativas": [
+            { "id": "a7", "name": "Boa" },
+            { "id": "a8", "name": "Ruim" },
+            { "id": "a9", "name": "Regular" }
+          ]
+        },
+        {
+          "pergunta": "Você teve febre nas últimas 24 horas?",
+          "alternativas": [
+            { "id": "a10", "name": "Sim" },
+            { "id": "a11", "name": "Não" }
+          ]
+        }
+      ]
     },
     {
       "id": "3",
@@ -62,15 +107,45 @@
       "respostasRealizadas": 2,
       "usuariosAlvo": 12900,
       "tipo": "Campanha",
-      "pergunta": {
-        "id": "p3",
-        "pergunta": "Como você está se sentindo?",
-        "alternativas": [
-          { "id": "a1", "texto": "Bem" },
-          { "id": "a2", "texto": "Mais ou menos" },
-          { "id": "a3", "texto": "Mal" }
-        ]
-      }
+      "perguntas": [
+        {
+          "pergunta": "Tudo bem?",
+          "alternativas": [
+            { "id": "a1", "name": "Bem" },
+            { "id": "a2", "name": "Mal" }
+          ]
+        },
+        {
+          "pergunta": "De onde você é?",
+          "alternativas": [
+            { "id": "a3", "name": "Sou do Maranhão" },
+            { "id": "a4", "name": "Sou de Mato Grosso" }
+          ]
+        },
+        {
+          "pergunta": "Você tomou todos os medicamentos conforme prescrição?",
+          "alternativas": [
+            { "id": "a12", "name": "Sim, todos os dias" },
+            { "id": "a13", "name": "A maioria dos dias" },
+            { "id": "a14", "name": "Não tomei regularmente" }
+          ]
+        },
+        {
+          "pergunta": "Qual seu nível de energia hoje?",
+          "alternativas": [
+            { "id": "a15", "name": "Alta" },
+            { "id": "a16", "name": "Média" },
+            { "id": "a17", "name": "Baixa" }
+          ]
+        },
+        {
+          "pergunta": "Você está sentindo alguma dor hoje?",
+          "alternativas": [
+            { "id": "a18", "name": "Sim" },
+            { "id": "a19", "name": "Não" }
+          ]
+        }
+      ]
     }
   ]
 }

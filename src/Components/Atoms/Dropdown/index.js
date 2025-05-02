@@ -1,15 +1,15 @@
-import styles from './styles.module.css';
+import { Dropdown, Arrow, DropdownList, DropdownItem } from './styles';
 
-function Dropdown({ onEdit, onDelete }) {
+function DropdownMenu({ onEdit, onDelete }) {
   return (
-    <div className={styles.dropdown}>
-      <div className={styles.arrow}></div>
-      <ul>
-        <li onClick={onDelete}>Excluir</li>
-        <li onClick={onEdit}>Editar</li>
-      </ul>
-    </div>
+    <Dropdown>
+      <Arrow />
+      <DropdownList>
+        <DropdownItem onClick={onDelete}>Excluir</DropdownItem>
+        <DropdownItem onClick={onEdit}>Editar</DropdownItem>
+      </DropdownList>
+    </Dropdown>
   );
 }
 
-export default Dropdown;
+export default DropdownMenu;

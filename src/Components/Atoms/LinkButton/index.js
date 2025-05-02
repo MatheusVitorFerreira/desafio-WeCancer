@@ -1,12 +1,7 @@
-import { Link } from 'react-router-dom'
-import Styles from './LinkeButton.module.css'
+import { ButtonLink } from './styles';
 
-function LinkButton({to, text}) {
-    return(
-       <Link className={Styles.btn} to= {to}>
-        {text}
-       </Link>
-    )
+function LinkButton({ to, text }) {
+  return <ButtonLink to={to}>{text}</ButtonLink>;
 }
 
-export default LinkButton
+export default LinkButton;
