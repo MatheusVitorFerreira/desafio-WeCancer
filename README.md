@@ -1,71 +1,50 @@
-# Getting Started with Create React App
+# 💼 Desafio WeCancer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma aplicação web desenvolvida com **React** e um backend simulado com **json-server**. O objetivo principal e demonstrar meus conhecimentos e aplica-los em um desafio proposto de forma que pudesse
+simular a criação de uma Interface simples de DashBoard
 
-## Available Scripts
+## 🧠 Páginas
 
-In the project directory, you can run:
+- ✅ **Sintomas**
+- ✅ **Navegação** e **Dúvidas**
+- ✅ Edição e visualização de **Campanhas**
+- ✅ **Agendamento**
+- ✅ Interface amigável com tratamento de erros usando `ErrorBoundary`
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Tecnologias Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🔧 Frontend (React)
 
-### `npm test`
+- [React](https://reactjs.org/)
+- [React Router DOM](https://reactrouter.com/)
+- [Styled-components](https://styled-components.com/)
+- [React Query](https://tanstack.com/query/latest)
+- [Axios](https://axios-http.com/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+- Tratamento de erros com **Error Boundaries**
+- Organização visual com **styled-components**
+- Arquitetura baseada em **Atomic Design**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🗄️ Backend (Simulado com json-server)
 
-### `npm run build`
+- [json-server](https://github.com/typicode/json-server)
+- Banco de dados simulado via `db.json`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧱 Arquitetura de Componentes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+O projeto segue o padrão **Atomic Design**, No qual Essa abordagem permite maior **reutilização**, **testabilidade** e **clareza** na organização da interface.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instale as dependências
+    `npm install`
+  - Isso instalará todas as bibliotecas como react, react-dom, styled-components, react-query, react-router-dom, axios, react-icons, etc.
 
-### `npm run eject`
+# 🧪 Scripts Disponíveis
+  ▶️ Iniciar o backend (json-server)
+     `npm run backend`
+    
+  - inicia o servidor mock na porta 5000, utilizando o db.json como base de dados.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# desafio-WeCancer
+# ▶️ Iniciar o frontend (React)
+    `npm start`
+  - Inicia a aplicação React na porta 3000.
