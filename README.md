@@ -46,5 +46,5 @@ O projeto segue o padrão **Atomic Design**, No qual Essa abordagem permite maio
   - inicia o servidor mock na porta 5000, utilizando o db.json como base de dados.
 
 # ▶️ Iniciar o frontend (React)
-    `npm start`
+    `npm run start`
   - Inicia a aplicação React na porta 3000.
