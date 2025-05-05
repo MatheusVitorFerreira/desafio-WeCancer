@@ -48,7 +48,7 @@ function Campanha() {
       </Box>
 
       {campanha.perguntas?.map((pergunta, index) => (
-        <Box key={pergunta.id || index}> {/* Aqui foi ajustada a chave */}
+        <Box key={pergunta.id || index}> 
           <div>
             <Label>{pergunta.pergunta}</Label>
             <Select

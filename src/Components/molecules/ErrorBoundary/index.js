@@ -19,7 +19,7 @@ class ErrorBoundary extends React.Component {
     if (this.state.hasError) {
       return (
         <ErrorContainer>
-          <Title>Ocorreu um erro inesperado. 😢</Title>
+          <Title>Ocorreu um erro inesperado.</Title>
           <Message>Tente novamente mais tarde.</Message>
         </ErrorContainer>
       );

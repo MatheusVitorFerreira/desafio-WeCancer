@@ -1,6 +1,7 @@
 function Duvidas () {
     return (
         <>
+         Duvidas
         </>
     )
 }
