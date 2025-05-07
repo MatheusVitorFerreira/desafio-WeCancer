@@ -11,7 +11,6 @@ simular a criação de uma Interface simples de DashBoard
 - ✅ **Agendamento**
 - ✅ Interface amigável com tratamento de erros usando `ErrorBoundary`
 
-
 ## 🚀 Tecnologias Utilizadas
 
 ### 🔧 Frontend (React)
@@ -26,6 +25,14 @@ simular a criação de uma Interface simples de DashBoard
 - Organização visual com **styled-components**
 - Arquitetura baseada em **Atomic Design**
 
+### Pages
+
+<p align="center">
+  <img src="src/assets/to_readme/TelaEdicao.png" alt="Tela Edição" width="600"/>
+  <img src="src/assets/to_readme/telaPesquisa.png" alt="Tela Pesquisa" width="600"/>
+  <img src="src/assets/to_readme/telaResultado.png" alt="Tela Resultado" width="600"/>
+</p>
+
 ## 🗄️ Backend (Simulado com json-server)
 
 - [json-server](https://github.com/typicode/json-server)
@@ -36,15 +43,20 @@ simular a criação de uma Interface simples de DashBoard
 O projeto segue o padrão **Atomic Design**, No qual Essa abordagem permite maior **reutilização**, **testabilidade** e **clareza** na organização da interface.
 
 ## Instale as dependências
+
     `npm install`
-  - Isso instalará todas as bibliotecas como react, react-dom, styled-components, react-query, react-router-dom, axios, react-icons, etc.
+
+- Isso instalará todas as bibliotecas como react, react-dom, styled-components, react-query, react-router-dom, axios, react-icons, etc.
 
 # 🧪 Scripts Disponíveis
-  ▶️ Iniciar o backend (json-server)
-     `npm run backend`
-    
-  - inicia o servidor mock na porta 5000, utilizando o db.json como base de dados.
+
+▶️ Iniciar o backend (json-server)
+`npm run backend`
+
+- inicia o servidor mock na porta 5000, utilizando o db.json como base de dados.
 
 # ▶️ Iniciar o frontend (React)
+
     `npm run start`
-  - Inicia a aplicação React na porta 3000.
+
+- Inicia a aplicação React na porta 3000.
