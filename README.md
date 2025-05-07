@@ -10,6 +10,15 @@ simular a criação de uma Interface simples de DashBoard
 - ✅ Edição e visualização de **Campanhas**
 - ✅ **Agendamento**
 - ✅ Interface amigável com tratamento de erros usando `ErrorBoundary`
+  
+<p align="center">
+  <h2> Tela de Pesquisas</h2>
+  <img src="src/assets/to_readme/telaPesquisa.png" alt="Tela Pesquisa" width="600"/>
+  <h2> Tela Edição</h2>
+  <img src="src/assets/to_readme/telaEdicao.png" alt="Tela Edição" width="600"/>
+  <h2> Tela Resultado</h2>
+  <img src="src/assets/to_readme/telaResultado.png" alt="Tela Resultado" width="600"/>
+</p>
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -24,14 +33,6 @@ simular a criação de uma Interface simples de DashBoard
 - Tratamento de erros com **Error Boundaries**
 - Organização visual com **styled-components**
 - Arquitetura baseada em **Atomic Design**
-
-### Pages
-
-<p align="center">
-  <img src="src/assets/to_readme/TelaEdicao.png" alt="Tela Edição" width="600"/>
-  <img src="src/assets/to_readme/telaPesquisa.png" alt="Tela Pesquisa" width="600"/>
-  <img src="src/assets/to_readme/telaResultado.png" alt="Tela Resultado" width="600"/>
-</p>
 
 ## 🗄️ Backend (Simulado com json-server)
 
